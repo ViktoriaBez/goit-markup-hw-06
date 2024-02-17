@@ -372,6 +372,9 @@ text-align: start;
     .benefits-item {
         flex-basis: calc((100% - 24px) / 2); 
     }
+    .benefits-subtitle {
+        text-align: left;
+        }
 
     .benefits-list{
      flex-direction: row;
@@ -647,7 +650,7 @@ letter-spacing: 0.02em;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        gap: 72px 24px;   
+        gap: 48px 24px;   
     }
 }   
 
@@ -870,9 +873,27 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
      margin-bottom: 16px;
 
        }
-
 }
-
+@media screen and (min-width: 1158px) {
+    .fotter-box {
+        padding: 100px 0;
+    }
+    .footer-container {
+        flex-direction: row;
+    }
+    .footer-logo-trans {
+        margin-right: 120px;    
+    }
+    .footer-subsct {
+        margin-left: 80px;
+    }
+    .footer-subsct-item {
+        margin-top: 0;
+    }
+    .footer-email-input{
+        opacity: 1;
+    } 
+}
 /*MODAL*/
 .backdrop {
     position: fixed;
