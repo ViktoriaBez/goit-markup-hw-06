@@ -214,13 +214,132 @@ gap: 40px;
         line-height: 1.5;
     }
 } 
+/* MOB-MENU-FOR-HEADE */
+
+.mob-menu {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mob-navigation {
+    padding-top: 72px;
+    padding-left: 16px;
+
+}
+.mob-nav-list {
+display: flex;
+flex-direction: column;
+gap: 40px;
+}
+.mob-nav-item-studio {
+    color: #404BBF;
+    font-size: 36px;
+font-weight: 700;
+line-height: 1.11; /* 111.111% */
+letter-spacing: 0.02em;
+}
+
+.mob-nav-item {
+    color: #2E2F42;
+font-size: 36px;
+font-weight: 700;
+line-height: 1.11; /* 111.111% */
+letter-spacing: 0.02em;
+}
+
+.mob-address {
+}
+
+.mob-adrees-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-left: 16px;
+}
+.mob-address-item {
+    color:  #434455;
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2; 
+    letter-spacing: 0.02em;
+    display: block;
+    cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-address-item :hover,
+.mob-address-item :focus{
+    color:#404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-icon-list {
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 48px 24px 40px 16px;
+}
+.mob-icon-item {
+    width: calc((100% - 120px) / 4);
+}
+.mob-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-icon-link:hover,
+.mob-icon-link:focus {
+  background-color: #404bbf;
+}
+.mob-icon-soc {
+    fill: #F4F4FD;
+}
+.mob-modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background-color: #fcfcfc;;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-modal-close-btn:hover,
+.mob-modal-close-btn:focus{
+    background-color:#404bbf;
+    border: none;
+}
+
 
 /*HERO*/
 
 .hero {
     display: flex;
     background-color: #2E2F42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70),
+     rgba(46, 47, 66, 0.70)), 
+     url(../images/dark-bg-mob.jpg);
     background-size: cover;
     background-position: center;
    background-repeat: no-repeat;
@@ -232,6 +351,13 @@ gap: 40px;
     height: 432px;
     /* padding: 188px 15px; */
     padding: 72px 0px;
+}
+
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx){
+    .hero {background-image: linear-gradient(rgba(46, 47, 66, 0.70),
+        rgba(46, 47, 66, 0.70)), 
+        url(../images/dark-bg-mob-x2.jpg);
+    }
 }
 
 .hero-title {
@@ -277,6 +403,9 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .hero {
     height: 436px;
     padding: 112px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70),
+     rgba(46, 47, 66, 0.70)), 
+     url(../images/dark-bg-tab.jpg);
 }
 .hero-title {
     font-size: 56px;
@@ -284,11 +413,28 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 1.07; 
     padding-bottom: 36px;
 }
+
+@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx){
+    .hero {background-image: linear-gradient(rgba(46, 47, 66, 0.70),
+        rgba(46, 47, 66, 0.70)), 
+        url(../images/dark-bg-tab-2x.jpg);
+    }
+}
+
 }
 @media screen and (min-width: 1158px) {
     .hero {
         height: 600px;
         padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.70),
+     rgba(46, 47, 66, 0.70)), 
+     url(../images/people-office.jpg);
+    }
+    @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx){
+        .hero {background-image: linear-gradient(rgba(46, 47, 66, 0.70),
+            rgba(46, 47, 66, 0.70)), 
+            url(../images/people-office-2x.jpg);
+        }
     }
 }
 
@@ -894,6 +1040,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
         opacity: 1;
     } 
 }
+
 /*MODAL*/
 .backdrop {
     position: fixed;
