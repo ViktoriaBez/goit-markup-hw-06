@@ -282,15 +282,23 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 56px;
     max-width: 496px;
     line-height: 1.07; 
+    padding-bottom: 36px;
 }
-
+}
+@media screen and (min-width: 1158px) {
+    .hero {
+        height: 600px;
+        padding: 188px 0;
+    }
 }
 
 /* BENEFITS*/
 
 .benefits{
-padding: 120px 0;
+/* padding: 120px 0; */
+padding: 96px 0;
 }
+
 .visually-hidden {
  position: absolute;
  width: 1px;
@@ -305,22 +313,28 @@ padding: 120px 0;
 }
 
 .benefits-list {
- display: flex;
- gap: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    row-gap: 72px;
+ /* gap: 24px;  */
 }
 
 .benefits-item {
  display: flex;
  flex-direction: column;   
- flex-basis: calc((100% - 72px) / 4); 
+ /* flex-basis: calc((100% - 72px) / 4);  */
 
 }
 
 .benefits-icon-container{
+    display: none;
     border-radius: 4px;
     border: 1px solid #8E8F99;
     background: #F4F4FD;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     height: 112px;
@@ -334,20 +348,63 @@ margin-bottom: 24px;
 
 .benefits-subtitle {
 color: #2E2F42;
-font-size: 20px;
-font-weight: 500;
-line-height: 1.20; 
+/* font-size: 20px; */
+font-size: 36px;
+/* font-weight: 500; */
+font-weight: 700;
+/* line-height: 1.20;  */
+line-height: 1.11;
 letter-spacing: 0.02em;
 margin-bottom: 8px;
+text-align: center;
 }
 
 .benefits-item-text {
 color:  #434455;
 font-size: 16px;
+font-weight: 500;
 line-height: 1.50; 
 letter-spacing: 0.02em;
 text-align: start;
 }
+
+@media screen and (min-width: 768px) {
+    .benefits-item {
+        flex-basis: calc((100% - 24px) / 2); 
+    }
+
+    .benefits-list{
+     flex-direction: row;
+     row-gap: 72px;
+     column-gap: 24px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .benefits{
+        padding: 120px 0;
+    }
+    .benefits-list {
+     gap: 24px; 
+    }
+    .benefits-item {
+        flex-basis: calc((100% - 72px) / 4); 
+    }
+    .benefits-icon-container{
+        display: flex;
+    }
+    .benefits-subtitle {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.20; 
+        }
+    .benefits-item-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.50;
+    }
+}
+
 
 /*TEAM*/
 .container-our-tean {
@@ -613,17 +670,26 @@ letter-spacing: 0.02em;
 /*footter*/
 .fotter-box {
     background-color: #2E2F42;
-    padding: 100px 0;
+    /* padding: 100px 0; */
+    padding: 96px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .footer-container {
     display: flex;
+    flex-direction: column;
     align-items: baseline;
-    
+    text-align: center;
+    gap: 72px;
 }
 
 .footer-logo-trans {
-    margin-right: 120px;  
+    /* margin-right: 120px;   */
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
 }
 
 .header-logo-web-footer{
@@ -634,9 +700,9 @@ font-size: 18px;
 font-weight: 700;
 line-height: 1.17; /* 116.667% */
 letter-spacing: 0.03em;
+text-align: center;
 text-transform: uppercase;
 display: inline-block;
-margin-bottom: 16px;
 }
 
 .futer-logo-studio{
@@ -648,7 +714,13 @@ margin-bottom: 16px;
  font-size: 16px;
  line-height: 1.50; /* 150% */
  letter-spacing: 0.02em;
- max-width: 264px;
+ /* max-width: 264px; */
+ text-align: left;
+}
+
+.footer-soc-icon-list {
+    text-align: center;
+    margin: 0 auto;
 }
 
 .footer-icon-list {
@@ -663,6 +735,7 @@ margin-bottom: 16px;
  line-height: 1,50em; 
  letter-spacing: 0.02em;
  margin-bottom: 16px;
+ /* text-align: center; */
 }
 
 .footer-icon-link {
@@ -686,11 +759,14 @@ margin-bottom: 16px;
 }
 
 .footer-subsct {
-    margin-left: 80px;
+    /* margin-left: 80px; */
+    margin: 0 auto;
 }
 
 .footer-form-email{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 24px;
 }
 .footer-subsct-item {
@@ -748,6 +824,39 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 .footer-submit-btn:hover,
 .footer-submit-btn:focus {
   background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+    .fotter-box {    
+    }
+    .footer-container {
+        flex-wrap: wrap;
+        flex-direction: row;
+        row-gap: 72px;
+        column-gap: 24px;
+        justify-content: left;
+    }
+    .end-page-text {
+        max-width: 264px;
+    }
+    .header-logo-web-footer {
+        text-align: left;;
+    }
+    .footer-subsct-item{
+        text-align: left;
+    }
+    .footer-soc-text-icon{
+        text-align: left;
+    }
+    .footer-form-email {
+        flex-direction: row;
+    }
+    .footer-soc-icon-list {
+        margin: 0;
+        text-align: left;
+    }
+
+
 }
 
 /*MODAL*/
