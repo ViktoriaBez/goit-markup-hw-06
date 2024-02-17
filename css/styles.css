@@ -848,6 +848,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     .footer-upper-part {
         display: flex;
         justify-content: center;
+        text-align: left;
     }
     .footer-logo-trans {
      margin-right: 24px;
@@ -864,7 +865,11 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     .footer-subsct-item {
         text-align: left;
     }
+    .footer-soc-text-icon {
+     margin: 0;
+     margin-bottom: 16px;
 
+       }
 
 }
 
