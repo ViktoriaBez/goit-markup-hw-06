@@ -787,6 +787,7 @@ font-size: 12px;
 line-height: 2; /* 200% */
 letter-spacing: 0.04em;
 border-radius: 4px;
+outline: none;
 background-color: transparent;
 border: 1px solid #FFF;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -827,36 +828,9 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (min-width: 768px) {
-    .fotter-box {    
-    }
-    .footer-container {
-        flex-wrap: wrap;
-        flex-direction: row;
-        row-gap: 72px;
-        column-gap: 24px;
-        justify-content: left;
-    }
-    .end-page-text {
-        max-width: 264px;
-    }
-    .header-logo-web-footer {
-        text-align: left;;
-    }
-    .footer-subsct-item{
-        text-align: left;
-    }
-    .footer-soc-text-icon{
-        text-align: left;
-    }
-    .footer-form-email {
-        flex-direction: row;
-    }
-    .footer-soc-icon-list {
-        margin: 0;
-        text-align: left;
-    }
-
-
+    .fotter-box {
+        padding: 96px 92px;
+    }  
 }
 
 /*MODAL*/
